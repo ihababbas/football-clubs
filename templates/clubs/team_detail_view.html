@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% block content%}
+
+<h3> Name : {{team.team_name}}</h3>
+<h3> Country : {{team.country_name}}</h3>
+
+<h3> Color : {{team.team_color}}</h3>
+
+
+
+<button  class="_button"><a href="{% url 'list_view' %}">back</a></button>
+{% endblock content%}
