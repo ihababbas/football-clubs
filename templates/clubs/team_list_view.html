@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block content%}
+<h1> All Teams </h1>
+{% for team in teams %}
+
+<h3> {{team.team_name}}</h3>
+<button><a href="{% url 'detail_view' team.pk %}">more details </a></button>
+<button><a href="{% url 'update_view' team.pk %}">Update</a></button>
+<button><a href="{% url 'delete_view' team.id%}" id="delete_list">Delete</a></button>
+{% endfor %}
+<br>
+<p>
+<button><a href="{% url 'create_view'%}">Create</a></button>
+</p>
+{% endblock content%}
