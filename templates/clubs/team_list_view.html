@@ -1,7 +1,9 @@
+
 {% extends '_base.html' %}
+{% load static  %}
 {% block content%}
 <h1> All Teams </h1>
-{% for team in teams %}
+{% for team in myteames %}
 
 <h3> {{team.team_name}}</h3>
 <button><a href="{% url 'detail_view' team.pk %}">more details </a></button>
