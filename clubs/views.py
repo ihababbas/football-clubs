@@ -6,7 +6,7 @@ from .models import Team
 class TeamListView(ListView):
     template_name = 'clubs/team_list_view.html'
     model = Team
-    context_object_name = 'teams'
+    context_object_name = 'myteames'
 
 class TeamDetailView(DetailView):
     template_name = 'clubs/team_detail_view.html'
@@ -15,13 +15,13 @@ class TeamDetailView(DetailView):
 class TeamCreateView(CreateView):
     template_name = 'clubs/team_create_view.html'
     model =Team
-    context_object_name = 'teams'
-    fields = ["team_name","country_name", "team_color" ,"author"]
+    context_object_name = 'myteames'
+    fields = ["team_name","country_name", "team_color" ,"logo","author"]
 
 class TeamUpdateView(UpdateView):
     template_name = 'clubs/team_update_view.html'
     model = Team
-    fields = ["team_name","country_name", "team_color" ,"author"]
+    fields = ["team_name","country_name", "team_color" ,"logo","author"]
     success_url = reverse_lazy('list_view')
 
 class TeamDeleteView(DeleteView):

@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block content%}
 
 <h3> Name : {{team.team_name}}</h3>
@@ -6,7 +7,7 @@
 
 <h3> Color : {{team.team_color}}</h3>
 
-
+<img src = "{{team.logo.url}}" />
 
 <button  class="_button"><a href="{% url 'list_view' %}">back</a></button>
 {% endblock content%}

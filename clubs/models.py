@@ -8,7 +8,7 @@ class Team(models.Model):
     team_name = models.CharField(max_length=56)
     country_name = models.CharField(max_length=56) 
     team_color = models.CharField(max_length=56)
-    #logo = models.ImageField(upload_to='upload/', default="")
+    logo = models.ImageField(upload_to='upload/', default="")
     author = models.ForeignKey(CustomUser,on_delete=models.CASCADE)
 
     def __str__(self):
